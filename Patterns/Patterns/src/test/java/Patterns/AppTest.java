@@ -1,4 +1,4 @@
-package decorator;
+package Patterns;
 
 import static org.junit.Assert.assertTrue;
 

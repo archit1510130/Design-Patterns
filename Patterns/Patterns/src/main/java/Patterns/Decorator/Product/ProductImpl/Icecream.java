@@ -1,10 +1,6 @@
-package decorator.Components.ComponentsImpl;
+package main.java.Patterns.Decorator.Product.ProductImpl;
 
-import decorator.Components.Icecream;
-
-
-public class SimpleIcecream implements Icecream {
-
+public class Icecream implements Product{
     @Override
     public int cost() {
         
@@ -16,7 +12,6 @@ public class SimpleIcecream implements Icecream {
         
         return "This is the example of Simple Icecream";
     }
-
     
     
 }
