@@ -1,9 +1,9 @@
-package main.java.Patterns.Decorator.decorators;
-import main.java.Patterns.Decorator.Product.ProductInterFace;
+package Patterns.Decorator.decorators;
 
+import Patterns.Decorator.Product.ProductInterFace;
 
-public interface DecoratorInterface implements ProductInterFace {
+public interface DecoratorInterface extends ProductInterFace {
 
-    
-    
+   
+
 }

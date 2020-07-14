@@ -1,4 +1,4 @@
-package main.java.Patterns.Decorator.Product;
+package Patterns.Decorator.Product;
 
 public interface ProductInterFace {
 

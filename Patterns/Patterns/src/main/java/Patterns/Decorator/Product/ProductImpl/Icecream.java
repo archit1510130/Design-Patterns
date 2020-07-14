@@ -1,6 +1,8 @@
-package main.java.Patterns.Decorator.Product.ProductImpl;
+package Patterns.Decorator.Product.ProductImpl;
 
-public class Icecream implements Product{
+import Patterns.Decorator.Product.ProductInterFace;
+
+public class Icecream implements ProductInterFace{
     @Override
     public int cost() {
         
