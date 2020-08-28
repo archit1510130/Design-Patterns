@@ -1,5 +1,9 @@
 package Patterns;
 
+import Patterns.Bridge.Abstractcar;
+import Patterns.Bridge.AsiaRules;
+import Patterns.Bridge.ModelL;
+import Patterns.Bridge.UnCarRules;
 import Patterns.Composite.Component.Airforce;
 import Patterns.Composite.Leaf.F16;
 import Patterns.Composite.Leaf.Rafel;
@@ -42,38 +46,33 @@ public class App
 
 
 
-   // u s
-        // /\ \
-        // f16  rafel  Nato
-        //             /\
-        //             f16  rafelmples
-
-        // clinet class
-
-        Airforce Nato =new Airforce();
-        Nato.add(new F16());
-        Nato.add(new Rafel());
+//------------------------------------------------------------------------------------------------------------------------//
 
 
-        // now 
-
-        Airforce US=new Airforce();
-        US.add(Nato);
-        US.add(new F16());
-
-        US.add(new Rafel());
+        // Bridge Patterns
 
 
-        // so now structure is somewhat like
+        //now I can have any combination of model with any location that we have 
+        // for adding another model we just need to add 1 class there but without Bridge that wouldb be 3
 
-        // u s
-        // /\ \
-        // f16  rafel  Nato
-        //             /\
-        //             f16  rafel
 
-        System.out.println(US.getPersonnel());
-        System.out.println(Nato.getPersonnel());
+        // Abstractcar ModelLAsia=new ModelL(new AsiaRules());
+        // Abstractcar ModelLUn=new ModelL(new UnCarRules());
+
+        // System.out.println(ModelLAsia.isCarRightHanded());
+        // System.out.println(ModelLUn.isCarRightHanded());
+        // same you can do for all others models
+
+
+
+
+
+
+        ////////////////////----------------------------------------------------------------/////////////////////////////////////////////
+
+
+    
+
 
 
 
