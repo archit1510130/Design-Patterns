@@ -1,5 +1,8 @@
 package Patterns;
 
+import Patterns.Composite.Component.Airforce;
+import Patterns.Composite.Leaf.F16;
+import Patterns.Composite.Leaf.Rafel;
 import Patterns.Decorator.Product.ProductInterFace;
 import Patterns.Decorator.Product.ProductImpl.Icecream;
 import Patterns.Decorator.decorators.decoratorComponents.Choclate;
@@ -39,8 +42,42 @@ public class App
 
 
 
-        
+   // u s
+        // /\ \
+        // f16  rafel  Nato
+        //             /\
+        //             f16  rafelmples
 
+        // clinet class
+
+        Airforce Nato =new Airforce();
+        Nato.add(new F16());
+        Nato.add(new Rafel());
+
+
+        // now 
+
+        Airforce US=new Airforce();
+        US.add(Nato);
+        US.add(new F16());
+
+        US.add(new Rafel());
+
+
+        // so now structure is somewhat like
+
+        // u s
+        // /\ \
+        // f16  rafel  Nato
+        //             /\
+        //             f16  rafel
+
+        System.out.println(US.getPersonnel());
+        System.out.println(Nato.getPersonnel());
+
+
+
+    
 
 
         
