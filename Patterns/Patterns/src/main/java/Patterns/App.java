@@ -4,6 +4,11 @@ import Patterns.Bridge.Abstractcar;
 import Patterns.Bridge.AsiaRules;
 import Patterns.Bridge.ModelL;
 import Patterns.Bridge.UnCarRules;
+import Patterns.Chain_of_Responsiblity.AbstractChain;
+import Patterns.Chain_of_Responsiblity.Request;
+import Patterns.Chain_of_Responsiblity.RequestType.AddRequest;
+import Patterns.Chain_of_Responsiblity.RequestType.Mul;
+import Patterns.Chain_of_Responsiblity.RequestType.SubstractRequest;
 import Patterns.Composite.Component.Airforce;
 import Patterns.Composite.Leaf.F16;
 import Patterns.Composite.Leaf.Rafel;
@@ -70,16 +75,24 @@ public class App
 
         ////////////////////----------------------------------------------------------------/////////////////////////////////////////////
 
+// Chain of Responsiblity
 
-    
+        // first we need to create chain , although in framework and all this is created at the time of creation 
+
+        AbstractChain chain1Obj=new AddRequest();
+       AbstractChain chainObj2=new SubstractRequest();
+       AbstractChain chainObj3=new Mul();
 
 
+       chain1Obj.setNextChain(chainObj2);
+       chainObj2.setNextChain(chainObj3);
 
+       // we can actully crate this septate class that is responsible for creating chain and return it to clien
 
-    
+       Request add=new Request(1,2,"sub");
 
-
-        
+       chain1Obj.calculate(add);
+       
 
 
     }
